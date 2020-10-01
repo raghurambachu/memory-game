@@ -119,8 +119,8 @@ class App extends React.Component {
                   key={card.id}
                   className={
                     card.isMatched
-                      ? "w-32 h-32 bg-green-200 flex items-center justify-center shadow-md"
-                      : "w-32 h-32 bg-blue-400 flex items-center justify-center shadow-md "
+                      ? "w-16 h-4 sm:w-32 sm:h-32 bg-green-200 flex items-center justify-center shadow-md"
+                      : "w-16 h-16 sm:w-32 sm:h-32 bg-blue-400 flex items-center justify-center shadow-md "
                   }
                 >
                   {card.icon}
@@ -128,7 +128,7 @@ class App extends React.Component {
               ) : (
                 <li
                   key={card.id}
-                  className="w-32 h-32 bg-gray-900 shadow-md cursor-pointer"
+                  className="w-16 h-16 sm:w-32 sm:h-32 bg-gray-900 shadow-md cursor-pointer"
                   onClick={() =>
                     !this.state.processing &&
                     this.showCard({ id: card.id, cid: card.cid })

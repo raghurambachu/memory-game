@@ -1,3 +1,6 @@
 .memory-game {
   width: 38rem;
+  @media all and (max-width: 500px) {
+    width: 22rem;
+  }
 }

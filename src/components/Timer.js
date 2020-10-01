@@ -8,7 +8,9 @@ function formatTime(seconds) {
     seconds = seconds % 60;
     return `${minutes} min ${seconds} sec`;
   } else {
-    return `${Math.trunc(seconds / 3600)} hr ${seconds % 3600} min`;
+    const hours = Math.trunc(seconds / 3600);
+    const minutes = Math.trunc((seconds % 3600) / 60);
+    return `${hours} hr ${minutes} min`;
   }
 }
 
